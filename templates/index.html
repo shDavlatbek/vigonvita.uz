@@ -1,0 +1,973 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Home || Vigonvita Tashkent{% endblock title %}
+{% block body %}
+<div class="page-wrapper">
+    <header class="main-header clearfix">
+        <nav class="main-menu clearfix">
+            <div class="main-menu-wrapper">
+                <div class="main-menu-wrapper__left">
+                    <div class="main-menu-wrapper__logo">
+                        <a href="#"><img src="assets/images/logo-1.png" alt="" /></a>
+                    </div>
+                    <div class="main-menu-wrapper__main-menu">
+                        <a href="#" class="mobile-nav__toggler">
+                            <span class="mobile-nav__toggler-bar"></span>
+                            <span class="mobile-nav__toggler-bar"></span>
+                            <span class="mobile-nav__toggler-bar"></span>
+                        </a>
+                        <ul class="main-menu__list">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#medicine">Medicine</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#news">News</a></li>
+                            <!-- <li class="dropdown">
+                            <a href="#">Home</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Home One</a>
+                                </li>
+                                <li><a href="index2.html">Home Two</a></li>
+                                <li><a href="index3.html">Home Three</a></li>
+                                <li><a href="index-one-page.html">Home One Page</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Header Styles</a>
+                                    <ul>
+                                        <li><a href="#">Header One</a></li>
+                                        <li><a href="#">Header Two</a></li>
+                                        <li><a href="#">Header Three</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="services.html">Services</a>
+                            <ul>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="services2.html">Services Two</a></li>
+                                <li><a href="audit-marketing.html">Audit Marketing</a></li>
+                                <li><a href="banking-advising.html">Banking Advising</a></li>
+                                <li><a href="business-growth.html">Business Growth</a></li>
+                                <li><a href="consumer-product.html">Consumer Product</a></li>
+                                <li><a href="financial-advice.html">Financial Advice</a></li>
+                                <li><a href="marketing-rule.html">Marketing Rule</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Pages</a>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="team.html">Team</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="faq.html">FAQS</a></li>
+                                <li><a href="404.html">404</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="cases.html">Cases</a>
+                            <ul>
+                                <li><a href="cases.html">Cases</a></li>
+                                <li><a href="cases-details.html">Cases Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="shop.html">Shop</a>
+                            <ul>
+                                <li><a href="shop.html">Products</a></li>
+                                <li><a href="#">Product Details</a></li>
+                                <li><a href="cart.html">Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="blog-sidebar.html">Blog</a>
+                            <ul>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
+                                <li><a href="#">Blog Details</a></li>
+                            </ul>
+                        </li> -->
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-menu-wrapper__right">
+                    <div class="main-menu-wrapper__social-box">
+                        <!-- <div class="main-menu-wrapper__social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="clr-fb"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="clr-dri"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
+                    </div> -->
+                        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select class="main-menu-select__language w-auto" name="language" onchange="this.form.submit()">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {% if language.code == "uz" %}
+                                            O'zbek Tili
+                                        {% else %}
+                                            {{ language.name_local }}
+                                        {% endif %}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="main-menu-wrapper__phone-contact">
+                        <p>Need help? Talk to an expert</p>
+                        <a href="tel:+998-99-840-7799">+998 99 840 7799</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="stricky-header stricked-menu main-menu">
+        <div class="sticky-header__content"></div>
+        <!-- /.sticky-header__content -->
+    </div>
+    <!-- /.stricky-header -->
+
+    <section class="main-slider">
+        <div
+            class="swiper-container thm-swiper__slider"
+            data-swiper-options='{"slidesPerView": 1, "loop": true,
+    "effect": "fade",
+    "pagination": {
+        "el": "#main-slider-pagination",
+        "type": "bullets",
+        "clickable": true
+    },
+    "navigation": {
+        "nextEl": "#main-slider__swiper-button-next",
+        "prevEl": "#main-slider__swiper-button-prev"
+    },
+    "autoplay": {
+        "delay": 5000
+    }}'
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="image-layer" style="background-image: url(assets/images/backgrounds/main-menu-slider.png)"></div>
+                    <!-- <div class="image-layer-overlay"></div> -->
+                    <div class="main-slider-shape-1"></div>
+                    <div class="main-slider-shape-2"></div>
+                    <div class="main-slider-shape-3"></div>
+                    <div class="main-slider-shape-4"></div>
+                    <div class="main-slider-shape-5"></div>
+                    <!-- /.image-layer -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="main-slider__content">
+                                    <p>welcome to Vigonvita</p>
+                                    <h2>
+                                        innovation <br />
+                                        biopharmaceutical <br />
+                                        company
+                                    </h2>
+                                    <!-- <h2>consulting <br> for every <br> business</h2> -->
+                                    <a href="#" class="thm-btn">Discover More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="image-layer" id="onvita-3d" style="background-image: url(assets/images/backgrounds/onvita-3d.png)"></div>
+                    <!-- <div class="image-layer-overlay"></div> -->
+                    <div class="main-slider-shape-1"></div>
+                    <div class="main-slider-shape-2"></div>
+                    <div class="main-slider-shape-3"></div>
+                    <div class="main-slider-shape-4"></div>
+                    <div class="main-slider-shape-5"></div>
+                    <!-- /.image-layer -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="main-slider__content">
+                                    <p>phosphodiesterase type 5</p>
+                                    <h2>
+                                        new gen <br />
+                                        medicine <br />
+                                        <span class="text-decoration-underline">onvita</span>
+                                    </h2>
+                                    <a href="#" class="thm-btn">Discover More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="main-slider__nav">
+                <div class="swiper-button-prev" id="main-slider__swiper-button-prev"><span class="main-slider__next-text">Prev</span><i class="icon-right-arrow icon-left-arrow"></i></div>
+                <div class="swiper-button-next" id="main-slider__swiper-button-next"><span class="main-slider__prev-text">Next</span><i class="icon-right-arrow"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!--Services One Start-->
+    <section class="services-one" id="about">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="section-title__title wow fadeInUp" data-wow-delay="300ms">Vigonvita Life Sciences Co., Ltd</h2>
+                <span class="section-title__tagline mt-3 wow fadeInUp" data-wow-delay="300ms">
+                    Vigonvita Life Sciences Co., Ltd, established in January 2013, is a biomedicine company, focusing on the field of neuropsychiatric system and infectious disease treatment.
+                    The company has undertaken a number of national, provincial and ministerial science and technology projects and won honors such as “National High-tech Enterprise”, “
+                    Leading enterprise in Suzhou Industrial Park”, “ Small and medium-sized scientific and technological enterprise in Jiangsu Province”. <br />
+                    <br />
+                    Vigonvita has a complete innovative medicine research and development system. We’ve set up R&D centers in Suzhou, Shanghai and Nantong, and set up a technical team with
+                    rich experience in medicine R&D. The R&D personnel account for 75% of the company's total personnel. <br />
+                    <br />
+                    To improve industrialization, Vigonvita Life Sciences Co., Ltd and Suzhou Institute of Material Medica jointly funded the establishment of Vigonvita (Lianyungang)
+                    Pharmaceutical Co., Ltd, which serves as a production site for the company's innovative medicines with its annual production capacity of 450 million capsules (or 1.6
+                    billion tablets). Also, the supporting API production workshop will soon be completed and put into use. The multi-functional modular production platform is under
+                    construction for emergencies.
+                </span>
+            </div>
+
+            <div class="section-title text-center mb-4">
+                <h2 class="section-title__title wow fadeInLeft" data-wow-delay="300ms" style="font-size: 40px">our centers</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+                    <!--Services One Single-->
+                    <div class="services-one__single">
+                        <div class="services-one__img">
+                            <img src="assets/images/production-centers/suzhou.png" alt="" />
+                        </div>
+                        <div class="services-one__content">
+                            <h3 class="services-one__title"><a href="#">Headquarter+R&D center</a></h3>
+                            <p class="services-one__text">Suzhou</p>
+                            <a href="#" class="services-one__btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+                    <!--Services One Single-->
+                    <div class="services-one__single">
+                        <div class="services-one__img">
+                            <img src="assets/images/production-centers/shanghai.png" alt="" />
+                        </div>
+                        <div class="services-one__content">
+                            <h3 class="services-one__title"><a href="#">R&D center</a></h3>
+                            <p class="services-one__text">Shanghai</p>
+                            <a href="#" class="services-one__btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+                    <!--Services One Single-->
+                    <div class="services-one__single">
+                        <div class="services-one__img">
+                            <img src="assets/images/production-centers/nantong.png" alt="" />
+                        </div>
+                        <div class="services-one__content">
+                            <h3 class="services-one__title"><a href="#">R&D center</a></h3>
+                            <p class="services-one__text">Nantong</p>
+                            <a href="#" class="services-one__btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+                    <!--Services One Single-->
+                    <div class="services-one__single">
+                        <div class="services-one__img">
+                            <img src="assets/images/production-centers/lianyungang.png" alt="" />
+                        </div>
+                        <div class="services-one__content">
+                            <h3 class="services-one__title"><a href="#">Producon site</a></h3>
+                            <p class="services-one__text">Lianyungang</p>
+                            <a href="#" class="services-one__btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Services One End-->
+
+    <!--Real World Start-->
+    <section class="real-world">
+        <div class="real-world-shape wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms" style="background-image: url(assets/images/shapes/real-world-shape.png)"></div>
+        <div class="container">
+            <div class="section-title text-center wow fadeInDown" data-wow-delay="200ms">
+                <h2 class="section-title__title">licences & Patents</h2>
+                <span class="section-title__tagline">Our company's Licences and Patents</span>
+            </div>
+
+            <div class="row certificates">
+                <div class="col-md-6 col-lg-4 wow fadeInLeft" data-wow-delay="200ms">
+                    <div class="shop-one__item">
+                        <div class="shop-one__image" data-fancybox="gallery" data-caption="Business license" data-src="assets/images/certificate/bussiness-permission.png">
+                            <!-- <span class="shop-one__sale">sale</span>/.shop-one__sale -->a href="#"
+                            <img src="assets/images/certificate/bussiness-permission.png" alt="Business license" />
+                            <!-- <a href="cart.html" class="thm-btn shop-one__cart">Add to cart</a> -->
+                            <!-- /.thm-btn shop-one__cart -->
+                        </div>
+                        <!-- /.shop-one__image -->
+                        <div class="shop-one__content text-center">
+                            <h3 class="shop-one__title"><a href="#">Business license</a></h3>
+                        </div>
+                        <!-- /.shop-one__content -->
+                    </div>
+                    <!-- /.shop-one__item -->
+                </div>
+                <!-- /.col-md-6 col-lg-3 -->
+
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="shop-one__item">
+                        <div class="shop-one__image" data-fancybox="gallery" data-caption="Pharmaceutical Manufacturing License" data-src="assets/images/certificate/bussiness-permission2.png">
+                            <!-- <span class="shop-one__sale">sale</span>/.shop-one__sale -->
+                            <img src="assets/images/certificate/bussiness-permission2.png" alt="Pharmaceutical Manufacturing License" />
+                            <!-- <a href="cart.html" class="thm-btn shop-one__cart">Add to cart</a> -->
+                            <!-- /.thm-btn shop-one__cart -->
+                        </div>
+                        <!-- /.shop-one__image -->
+                        <div class="shop-one__content text-center">
+                            <h3 class="shop-one__title"><a href="#">Pharmaceutical Manufacturing License</a></h3>
+                        </div>
+                        <!-- /.shop-one__content -->
+                    </div>
+                    <!-- /.shop-one__item -->
+                </div>
+                <!-- /.col-md-6 col-lg-3 -->
+            </div>
+        </div>
+    </section>
+    <!--Real World Start-->
+
+    <!--Brand One Start-->
+    <section class="brand-one" >
+        <div class="container">
+            <h4 class="brand-one__title wow fadeInDown" data-wow-delay="200ms">Honors and Qualifications</h4>
+            <div
+                class="thm-swiper__slider swiper-container wow fadeInDown"
+                data-wow-delay="200ms"
+                data-swiper-options='
+        {"spaceBetween": 100, 
+        "slidesPerView": 5, 
+        "autoplay": { "delay": 5000 }, 
+        "pagination": {
+        "type": "bullets",
+        "clickable": true
+        },
+        "breakpoints": {
+            "0": {
+                "spaceBetween": 30,
+                "slidesPerView": 2
+            },
+            "375": {
+                "spaceBetween": 30,
+                "slidesPerView": 2
+            },
+            "575": {
+                "spaceBetween": 30,
+                "slidesPerView": 3
+            },
+            "767": {
+                "spaceBetween": 50,
+                "slidesPerView": 4
+            },
+            "991": {
+                "spaceBetween": 50,
+                "slidesPerView": 4
+            },
+            "1199": {
+                "spaceBetween": 50,
+                "slidesPerView": 4
+            }
+        }}'
+            >
+                <div class="swiper-wrapper">
+                    <div
+                        class="swiper-slide"
+                        data-fancybox="gallery"
+                        data-caption="Gazelle Enterprises in Southern Jiangsu National Innovation Demonstration Zone"
+                        data-src="assets/images/honors/Gazelle Enterprises in Southern Jiangsu National Innovation Demonstration Zone.jpg"
+                    >
+                        <img
+                            src="assets/images/honors/Gazelle Enterprises in Southern Jiangsu National Innovation Demonstration Zone.jpg"
+                            alt="Gazelle Enterprises in Southern Jiangsu National Innovation Demonstration Zone"
+                            title="Gazelle Enterprises in Southern Jiangsu National Innovation Demonstration Zone"
+                        />
+                        <div class="title col-12 d-inline-block text-truncate">Gazelle Enterprises in Southern Jiangsu National Innovation Demonstration Zone</div>
+                    </div>
+                    <!-- /.swiper-slide -->
+
+                    <div
+                        class="swiper-slide"
+                        data-fancybox="gallery"
+                        data-caption="Jiangsu Science and Technology-based Small and Medium-sized Enterprises"
+                        data-src="assets/images/honors/Jiangsu Science and Technology-based Small and Medium-sized Enterprises.jpg"
+                    >
+                        <img
+                            src="assets/images/honors/Jiangsu Science and Technology-based Small and Medium-sized Enterprises.jpg"
+                            alt="Jiangsu Science and Technology-based Small and Medium-sized Enterprises"
+                            title="Jiangsu Science and Technology-based Small and Medium-sized Enterprises"
+                        />
+                        <div class="title col-12 d-inline-block text-truncate">Jiangsu Science and Technology-based Small and Medium-sized Enterprises</div>
+                    </div>
+                    <!-- /.swiper-slide -->
+
+                    <!-- <div
+                        class="swiper-slide"
+                        data-fancybox="gallery"
+                        data-caption="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
+                        data-src="assets/images/honors/Jinji Lake Double Hundred Talent Program for Science and Technology Leaders.jpg"
+                    >
+                        <img
+                            src="assets/images/honors/Jinji Lake Double Hundred Talent Program for Science and Technology Leaders.jpg"
+                            alt="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
+                            title="Jinji Lake Double Hundred Talent Program for Science and Technology Leaders"
+                        />
+                        <div class="title col-12 d-inline-block text-truncate">Jinji Lake Double Hundred Talent Program for Science and Technology Leaders</div>
+                    </div> -->
+                    <!-- /.swiper-slide -->
+
+                    <div
+                        class="swiper-slide"
+                        data-fancybox="gallery"
+                        data-caption="Listed nursery company in Suzhou Industrial Park"
+                        data-src="assets/images/honors/Listed nursery company in Suzhou Industrial Park.jpg"
+                    >
+                        <img
+                            src="assets/images/honors/Listed nursery company in Suzhou Industrial Park.jpg"
+                            alt="Listed nursery company in Suzhou Industrial Park"
+                            title="Listed nursery company in Suzhou Industrial Park"
+                        />
+                        <div class="title col-12 d-inline-block text-truncate">Listed nursery company in Suzhou Industrial Park</div>
+                    </div>
+                    <!-- /.swiper-slide -->
+
+
+                    <div
+                        class="swiper-slide"
+                        data-fancybox="gallery"
+                        data-caption="National High-tech Enterprise"
+                        data-src="assets/images/honors/National High-tech Enterprise.jpg"
+                    >
+                        <img
+                            src="assets/images/honors/National High-tech Enterprise.jpg"
+                            alt="National High-tech Enterprise"
+                            title="National High-tech Enterprise"
+                        />
+                        <div class="title col-12 d-inline-block text-truncate">National High-tech Enterprise</div>
+                    </div>
+                    <!-- /.swiper-slide -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Brand One End-->
+
+
+    <!--Our Mission Start-->
+    <section class="our-mission" id="medicine">
+        <div class="our-mission-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%" style="background-image: url(assets/images/medicine/Picture.png)"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 pb-5">
+                    <div class="our-mission__inner">
+                        <h2 class="our-mission__title wow fadeInRight">
+                            Our Medicines <br />
+                        </h2>
+                        <a href="#" class="thm-btn our-mission__btn">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Our Mission End-->
+
+    <!--Financial Advice Start-->
+    <section class="financial-advice">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 wow fadeInUp">
+                    <div class="financial-advice__box tabs-box">
+                        <ul class="tab-btns tab-buttons clearfix list-unstyled">
+                            <li data-tab="#onvita" class="tab-btn active-btn"><span>Onvita</span></li>
+                            <li data-tab="#longvita" class="tab-btn"><span>Longvita</span></li>
+                            <!-- <li data-tab="#gobal" class="tab-btn"><span>Gobal Solutions</span></li> -->
+                        </ul>
+                        <div class="tabs-content">
+                            <div class="tab active-tab" id="onvita">
+                                <div class="financial-advice__content">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="financial-advice__single-1">
+                                                <ul class="list-unstyled financial-advice__list-box">
+                                                    <li>
+                                                        <div class="financial-advice__icon">
+                                                            <span class="icon-checkmark"></span>
+                                                        </div>
+                                                        <div class="financial-advice__list-box-content">
+                                                            <h3 class="finalcial-advice__list-box-title">Highest Success Rates</h3>
+                                                            <p class="finalcial-advice__list-box-text">
+                                                                Lorem Ipsum nibh vel velit auctor aliqu. Aenean sollic tudin, lorem is simply free text quis bibendum.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="financial-advice__icon">
+                                                            <span class="icon-checkmark"></span>
+                                                        </div>
+                                                        <div class="financial-advice__list-box-content">
+                                                            <h3 class="finalcial-advice__list-box-title">We build experience</h3>
+                                                            <p class="finalcial-advice__list-box-text">
+                                                                Lorem Ipsum nibh vel velit auctor aliqu. Aenean sollic tudin, lorem is simply free text quis bibendum.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="financial-advice__single-1 financial-advice__single-2">
+                                                <p class="financial-advice_-desc">
+                                                    There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form injected humour or
+                                                    randomised words which don't look believable.
+                                                </p>
+                                                <ul class="list-unstyled financial-advice__list-box-2">
+                                                    <li>If you are going to use a passage</li>
+                                                    <li>Lorem Ipsum you need to be sure</li>
+                                                    <li>There isn't anything embarrassing</li>
+                                                    <li>Hidden in the middle of text</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="financial-advice__single-1 financial-advice__single-3">
+                                                <div class="financial-advice__img">
+                                                    <img src="assets/images/medicine/onvita-present.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab" id="longvita">
+                                <div class="financial-advice__content">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="financial-advice__single-1">
+                                                <ul class="list-unstyled financial-advice__list-box">
+                                                    <li>
+                                                        <div class="financial-advice__icon">
+                                                            <span class="icon-checkmark"></span>
+                                                        </div>
+                                                        <div class="financial-advice__list-box-content">
+                                                            <h3 class="finalcial-advice__list-box-title">Highest Success Rates</h3>
+                                                            <p class="finalcial-advice__list-box-text">
+                                                                Lorem Ipsum nibh vel velit auctor aliqu. Aenean sollic tudin, lorem is simply free text quis bibendum.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="financial-advice__icon">
+                                                            <span class="icon-checkmark"></span>
+                                                        </div>
+                                                        <div class="financial-advice__list-box-content">
+                                                            <h3 class="finalcial-advice__list-box-title">We build experience</h3>
+                                                            <p class="finalcial-advice__list-box-text">
+                                                                Lorem Ipsum nibh vel velit auctor aliqu. Aenean sollic tudin, lorem is simply free text quis bibendum.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="financial-advice__single-1 financial-advice__single-2">
+                                                <p class="financial-advice_-desc">
+                                                    There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form injected humour or
+                                                    randomised words which don't look believable.
+                                                </p>
+                                                <ul class="list-unstyled financial-advice__list-box-2">
+                                                    <li>If you are going to use a passage</li>
+                                                    <li>Lorem Ipsum you need to be sure</li>
+                                                    <li>There isn't anything embarrassing</li>
+                                                    <li>Hidden in the middle of text</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="financial-advice__single-1 financial-advice__single-3">
+                                                <div class="financial-advice__img">
+                                                    <img src="assets/images/medicine/longvita-present.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Financial Advice End-->
+
+
+
+    <!--FAQS Page Start-->
+    <section class="faqs-page" id="faq">
+        <div class="container">
+            <div class="section-title text-center wow fadeInDown">
+                <h2 class="section-title__title">Question Answers</h2>
+                <span class="section-title__tagline">If you have any more questions, Contact us</span>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                        <div class="accrodion wow fadeInRight" data-wow-delay="200ms">
+                            <div class="accrodion-title">
+                                <h4><span>.</span> Lorem ipsum dolor sit amet?</h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <div class="inner">
+                                    <p>
+                                        Sed ornare efficitur rutrum. Donec ac lectus neque. Fusce at tempus lacus. Nulla quis dictum tortor, et mattis nunc. Nulla non varius ex. Morbi accumsan erat at erat pulvinar fermentum. Integer tempor, mi vel egestas tristique, justo mi luctus justo, non facilisis leo neque sit amet justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ullamcorper hendrerit vestibulum.
+                                    </p>
+                                </div>
+                                <!-- /.inner -->
+                            </div>
+                        </div>
+                        <div class="accrodion active wow fadeInRight" data-wow-delay="300ms">
+                            <div class="accrodion-title">
+                                <h4><span>.</span> Lorem ipsum dolor sit amet?</h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <div class="inner">
+                                    <p>
+                                        Sed ornare efficitur rutrum. Donec ac lectus neque. Fusce at tempus lacus. Nulla quis dictum tortor, et mattis nunc. Nulla non varius ex. Morbi accumsan erat at erat pulvinar fermentum. Integer tempor, mi vel egestas tristique, justo mi luctus justo, non facilisis leo neque sit amet justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ullamcorper hendrerit vestibulum.
+                                    </p>
+                                </div>
+                                <!-- /.inner -->
+                            </div>
+                        </div>
+                        <div class="accrodion wow fadeInRight" data-wow-delay="400ms">
+                            <div class="accrodion-title">
+                                <h4><span>.</span> Lorem ipsum dolor sit amet?</h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <div class="inner">
+                                    <p>
+                                        Sed ornare efficitur rutrum. Donec ac lectus neque. Fusce at tempus lacus. Nulla quis dictum tortor, et mattis nunc. Nulla non varius ex. Morbi accumsan erat at erat pulvinar fermentum. Integer tempor, mi vel egestas tristique, justo mi luctus justo, non facilisis leo neque sit amet justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ullamcorper hendrerit vestibulum.
+                                    </p>
+                                </div>
+                                <!-- /.inner -->
+                            </div>
+                        </div>
+                        <div class="accrodion wow fadeInRight" data-wow-delay="500ms">
+                            <div class="accrodion-title">
+                                <h4><span>.</span> Lorem ipsum dolor sit amet?</h4>
+                            </div>
+                            <div class="accrodion-content">
+                                <div class="inner">
+                                    <p>
+                                        Sed ornare efficitur rutrum. Donec ac lectus neque. Fusce at tempus lacus. Nulla quis dictum tortor, et mattis nunc. Nulla non varius ex. Morbi accumsan erat at erat pulvinar fermentum. Integer tempor, mi vel egestas tristique, justo mi luctus justo, non facilisis leo neque sit amet justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ullamcorper hendrerit vestibulum.
+                                    </p>
+                                </div>
+                                <!-- /.inner -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FAQS Page End-->
+
+    <!--CTA One Start-->
+    <section class="cta-one wow zoomIn" data-wow-delay="100ms">
+        <div class="cta-one-bg" style="background-image: url(assets/images/backgrounds/cta-one-bg.png)"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="cta-one__inner">
+                        <div class="cta-one__left">
+                            <h2 class="cta-one__title">
+                                Still have questions?
+                            </h2>
+                        </div>
+                        <div class="cta-one__right">
+                            <a href="#" class="thm-btn cta-one__btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CTA One End-->
+
+    <!--News One Start-->
+    <section class="news-one" id="news">
+        <div class="container">
+            <div class="section-title text-center wow fadeInUp" data-wow-delay="200ms">
+                <h2 class="section-title__title">Company News</h2>
+                <span class="section-title__tagline">Checkout what we have been doing</span>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <!--News One Single-->
+                    <div class="news-one__single">
+                        <div class="news-one__img">
+                            <img src="https://placehold.co/350x350" alt="" />
+                            <a href="#">
+                                <span class="news-one__plus" style="transform: rotateZ(-45deg);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 448 512">
+                                        <path fill="#fff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="news-one__content">
+                            <ul class="list-unstyled news-one__meta">
+                                <!-- <li>
+                                    <a href="#"><i class="far fa-user-circle"></i> Category</a>
+                                </li>
+                                <li><span>/</span></li> -->
+                                <li>
+                                    <a href="#"><i class="far fa-eye"></i> 2 Views</a>
+                                </li>
+                            </ul>
+                            <h3 class="news-one__title">
+                                <a href="#">Aenean non placerat elit.</a>
+                            </h3>
+                            <p class="news-one__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus auctor metus.</p>
+                            <a href="#" class="news-one__btn">Read More</a>
+                            <div class="news-one__date-box">
+                                <p>26 mar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <!--News One Single-->
+                    <div class="news-one__single">
+                        <div class="news-one__img">
+                            <img src="https://placehold.co/350x350" alt="" />
+                            <a href="#">
+                                <span class="news-one__plus" style="transform: rotateZ(-45deg);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 448 512">
+                                        <path fill="#fff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="news-one__content">
+                            <ul class="list-unstyled news-one__meta">
+                                <!-- <li>
+                                    <a href="#"><i class="far fa-user-circle"></i> Category</a>
+                                </li>
+                                <li><span>/</span></li> -->
+                                <li>
+                                    <a href="#"><i class="far fa-eye"></i> 2 Views</a>
+                                </li>
+                            </ul>
+                            <h3 class="news-one__title">
+                                <a href="#">Aenean non placerat elit.</a>
+                            </h3>
+                            <p class="news-one__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus auctor metus.</p>
+                            <a href="#" class="news-one__btn">Read More</a>
+                            <div class="news-one__date-box">
+                                <p>26 mar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <!--News One Single-->
+                    <div class="news-one__single">
+                        <div class="news-one__img">
+                            <img src="https://placehold.co/350x350" alt="" />
+                            <a href="#">
+                                <span class="news-one__plus" style="transform: rotateZ(-45deg);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 448 512">
+                                        <path fill="#fff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="news-one__content">
+                            <ul class="list-unstyled news-one__meta">
+                                <!-- <li>
+                                    <a href="#"><i class="far fa-user-circle"></i> Category</a>
+                                </li>
+                                <li><span>/</span></li> -->
+                                <li>
+                                    <a href="#"><i class="far fa-eye"></i> 2 Views</a>
+                                </li>
+                            </ul>
+                            <h3 class="news-one__title">
+                                <a href="#">Aenean non placerat elit.</a>
+                            </h3>
+                            <p class="news-one__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus auctor metus.</p>
+                            <a href="#" class="news-one__btn">Read More</a>
+                            <div class="news-one__date-box">
+                                <p>26 mar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms"><a href="#" class="thm-btn mx-auto">Discover More</a></div>
+        </div>
+    </section>
+    <!--News One End-->
+
+
+    <!--Site Footer One Start-->
+    <footer class="site-footer">
+        <div class="site-footer-shape wow slideInRight" data-wow-delay="100ms" data-wow-duration="3500ms" style="background-image: url(assets/images/shapes/footer-shape.png)"></div>
+        <div class="container">
+            <div class="site-footer__top">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget__column footer-widget__about">
+                            <div class="footer-widget__about-logo">
+                                <a href="#"><img src="assets/images/footer-logo.png" alt="" /></a>
+                            </div>
+                            <!-- <p class="footer-widget__text">Welcome to our consultancy agency. Lore ipsum simply text amet cing elit.</p> -->
+                            <ul class="list-unstyled footer-widget__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-phone-square-alt"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="tel:+92-666-888-0000">+92 666 888 0000</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>66 Broklyn Street New York, USA</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="footer-widget__column footer-widget__explore clearfix">
+                            <h3 class="footer-widget__title">Explore</h3>
+                            <ul class="footer-widget__explore-list list-unstyled">
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#medicine">Medicine</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#news">News</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-8 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__column footer-widget__newsletter">
+                            <h3 class="footer-widget__title footer-widget__title-news">Newsletter</h3>
+                            <form class="footer-widget__newsletter-form">
+                                <p class="footer-widget__newsletter-text">Subsrcibe for latest articles and resources</p>
+                                <div class="footer-widget__newsletter-input-box">
+                                    <input type="email" placeholder="Email address" name="email" />
+                                    <button type="submit" class="footer-widget__newsletter-btn">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-bottom">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="site-footer-bottom__inner">
+                            <div class="site-footer-bottom__left">
+                                <p>©️ 2024  Vigonvita Life Sciences Co., Ltd. Copyright</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Site Footer One End-->
+</div>
+<!-- /.page-wrapper -->
+
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+        <div class="logo-box">
+            <a href="#" aria-label="logo image"><img src="assets/images/logo-1.png" width="155" alt="" /></a>
+        </div>
+        <!-- /.logo-box -->
+        <div class="mobile-nav__container"></div>
+        <!-- /.mobile-nav__container -->
+
+        <ul class="mobile-nav__contact list-unstyled">
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:ju.zhou@vigonvita.cn">ju.zhou@vigonvita.cn</a>
+            </li>
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:irisbayev.m@gmail.com">irisbayev.m@gmail.com</a>
+            </li>
+            <li>
+                <i class="fa fa-phone-alt"></i>
+                <a href="tel:+998-99-840-7799">99 840 7799</a>
+            </li>
+        </ul>
+        <!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__top">
+            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                <select class="main-menu-select__language w-auto" name="language" onchange="this.form.submit()">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {% if language.code == "uz" %}
+                                O'zbek Tili ({{ language.code }})
+                            {% else %}
+                                {{ language.name_local }} ({{ language.code }})
+                            {% endif %}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+        <!-- /.mobile-nav__top -->
+    </div>
+    <!-- /.mobile-nav__content -->
+</div>
+<!-- /.mobile-nav__wrapper -->
+{% endblock body %}

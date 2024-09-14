@@ -9,14 +9,13 @@
         {% for language in languages %}
             <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
                 {% if language.code == "uz" %}
-                    O'zbek Tili ({{ language.code }})
+                    O'zbek Tili
                 {% else %}
-                    {{ language.name_local }} ({{ language.code }})
+                    {{ language.name_local }}
                 {% endif %}
             </option>
         {% endfor %}
     </select>
-    <input type="submit" value="Go">
 </form>
 
 {% for new in news %}
