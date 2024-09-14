@@ -6,4 +6,4 @@ from .models import News, Medicine
 
 class HomeView(View):
     def get(self, request):
-        return render(request, 'home.html', {'news': News.objects.all()})
+        return render(request, 'index.html', {'news': News.objects.all()})
