@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'database' / 'db.sqlite3',
     }
 }
 
@@ -145,7 +145,7 @@ LOCALE_PATHS = [
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "staticfiles",
 ]
 
 MEDIA_URL = '/media/'
