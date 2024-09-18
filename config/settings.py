@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ub4f_+^zm$!!xoa(2fg-&br-$^#%-*972yq3vhp7=^rp@+$5ce'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['vigonvita.uz']
+CSRF_TRUSTED_ORIGINS = ['https://vigonvita.uz']
 
 # Application definition
 
@@ -143,6 +143,7 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "staticfiles",
