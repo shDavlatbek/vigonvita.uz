@@ -10,14 +10,14 @@ services:
 
   web:
     build: .
-    command: gunicorn config.wsgi:application --bind 0.0.0.0:8199
-    # volumes:
-    #   - .:/app
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8200
+    volumes:
+      - .:/app
     ports:
-      - "8199:8199"
+      - "8200:8200"
     # depends_on:
     #   - db
     restart: always
 
-# volumes:
-#   postgres_data:
+volumes:
+  web:
