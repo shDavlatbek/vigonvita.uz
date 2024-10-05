@@ -9445,3 +9445,7 @@ body.boxed-wrapper {
 .site-footer__top{
     padding: 50px 0 50px;
 }
+.main-menu .main-menu__list>li+li,
+.stricky-header .main-menu__list>li+li {
+    margin-left: 34px;
+}
