@@ -360,7 +360,9 @@
                     <h2 class="our-mission__title wow fadeInRight">
                         {% translate "Bizning Dorilar" %} <br />
                     </h2>
-                    <a href="{% url "coming-soon" %}" class="thm-btn our-mission__btn">{% translate "Barchasi" %}</a>
+                    <div class='our-mission__btn'>
+                        <img class='img-fluid wow fadeInUp' data-wow-delay="300ms" width='70%' src="{% static 'assets/images/shapes/beauty-line.png' %}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -494,6 +496,11 @@
                     </div>
                 </div>
             </div>
+            <div class="w-100 text-center mt-5 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <a href="{% url 'coming-soon' %}" class="thm-btn custom-btn mx-auto">
+                    {% translate "Barchasi" %}
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -604,13 +611,13 @@
                 {% include "components/news_single.html" with news=single %}
             {% endfor %}
         </div>
-        {% if news|length > 4 %}
-        <div class="w-100 text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+        {% comment %} {% if news|length > 4 %} {% endcomment %}
+        <div class="w-100 text-center mt-5 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
             <a href="{% url 'coming-soon' %}" class="thm-btn mx-auto">
                 {% translate "Barchasi" %}
             </a>
         </div>
-        {% endif %}
+        {% comment %} {% endif %} {% endcomment %}
     </div>
 </section>
 <!--News One End-->
