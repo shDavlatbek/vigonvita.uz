@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-09 16:12+0500\n"
-"PO-Revision-Date: 2024-10-09 16:10+0500\n"
+"POT-Creation-Date: 2024-10-09 17:03+0500\n"
+"PO-Revision-Date: 2024-10-09 17:04+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.5\n"
 
 #: .\config\settings.py:115
@@ -62,8 +62,9 @@ msgid "FAQ"
 msgstr "FAQ"
 
 #: .\templates\components\header_link.html:6 .\templates\pages\home.html:606
-#: .\templates\pages\news.html:5 .\templates\pages\news.html:19
-#: .\templates\pages\news.html:21 .\web\models.py:23 .\web\models.py:24
+#: .\templates\pages\news-detail.html:21 .\templates\pages\news.html:5
+#: .\templates\pages\news.html:19 .\templates\pages\news.html:21
+#: .\web\models.py:23 .\web\models.py:24
 msgid "Yangiliklar"
 msgstr "Новости"
 
@@ -72,6 +73,7 @@ msgid "Bo'glanish"
 msgstr "Контакты"
 
 #: .\templates\components\news_single.html:21
+#: .\templates\pages\news-detail.html:46 .\templates\pages\news-detail.html:72
 msgid "Ko'rishlar"
 msgstr "Просмотров"
 
@@ -81,11 +83,12 @@ msgstr "Просмотров"
 msgid "Batafsil"
 msgstr "Подробнее"
 
-#: .\templates\pages\home.html:5 .\templates\pages\news.html:17
+#: .\templates\pages\home.html:5 .\templates\pages\news-detail.html:19
+#: .\templates\pages\news.html:17
 msgid "Bosh sahifa"
 msgstr "Главная страница"
 
-#: .\templates\pages\home.html:5 .\templates\pages\news-detail.html:5
+#: .\templates\pages\home.html:5 .\templates\pages\news-detail.html:7
 #: .\templates\pages\news.html:5
 msgid "Vigonvita Toshkent"
 msgstr "Вигонвита Ташкент"
@@ -149,6 +152,10 @@ msgstr "Остались вопросы?"
 #: .\templates\pages\home.html:607
 msgid "Biz nima qilayotganimizni ko'ring"
 msgstr "Посмотрите, что мы делаем"
+
+#: .\templates\pages\news-detail.html:63
+msgid "Ohirgi yangiliklar"
+msgstr "Последние новости"
 
 #: .\web\models.py:6 .\web\models.py:27
 msgid "1:1 Nisbatdagi rasm yuklang"
