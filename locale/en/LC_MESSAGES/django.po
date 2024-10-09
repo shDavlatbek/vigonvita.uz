@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-18 16:02+0500\n"
-"PO-Revision-Date: 2024-09-18 16:03+0500\n"
+"POT-Creation-Date: 2024-10-09 16:12+0500\n"
+"PO-Revision-Date: 2024-10-09 16:09+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -35,118 +35,125 @@ msgstr "English"
 msgid "Tez kunlarda"
 msgstr "Сoming Soon"
 
-#: .\templates\components\footer.html:37
+#: .\templates\components\footer.html:38
 msgid "O'zbekiston, Shahar: Toshkent, Tuman: Yunusobod, Sohibkor ko'chasi, 2"
 msgstr "Uzbekistan, City: Tashkent, District: Yunusabad, Street Sohibkor, 2"
 
-#: .\templates\components\footer.html:47 .\templates\components\header.html:19
+#: .\templates\components\footer.html:73 .\templates\pages\home.html:90
+msgid "IP MChJ VIGONVITA TOSHKENT"
+msgstr "IE LLC VIGONVITA TASHKENT"
+
+#: .\templates\components\header.html:37 .\templates\pages\home.html:593
+msgid "Biz bilan bog'lanish"
+msgstr "Call us"
+
+#: .\templates\components\header_link.html:3
 msgid "Biz haqimizda"
 msgstr "About Us"
 
-#: .\templates\components\footer.html:48 .\templates\components\header.html:20
+#: .\templates\components\header_link.html:4 .\web\models.py:35
+#: .\web\models.py:36
 msgid "Dorilar"
 msgstr "Medicine"
 
-#: .\templates\components\footer.html:49 .\templates\components\header.html:21
+#: .\templates\components\header_link.html:5
 msgid "FAQ"
 msgstr "FAQ"
 
-#: .\templates\components\footer.html:50 .\templates\components\header.html:22
-#: .\templates\home.html:599
+#: .\templates\components\header_link.html:6 .\templates\pages\home.html:606
+#: .\templates\pages\news.html:5 .\templates\pages\news.html:19
+#: .\templates\pages\news.html:21 .\web\models.py:23 .\web\models.py:24
 msgid "Yangiliklar"
 msgstr "News"
 
-#: .\templates\components\footer.html:51 .\templates\components\header.html:23
+#: .\templates\components\header_link.html:7
 msgid "Bo'glanish"
 msgstr "Contact us"
-
-#: .\templates\components\header.html:41 .\templates\home.html:586
-msgid "Biz bilan bog'lanish"
-msgstr "Call us"
 
 #: .\templates\components\news_single.html:21
 msgid "Ko'rishlar"
 msgstr "Views"
 
-#: .\templates\components\news_single.html:28 .\templates\home.html:127
-#: .\templates\home.html:140 .\templates\home.html:156
-#: .\templates\home.html:169
+#: .\templates\components\news_single.html:28 .\templates\pages\home.html:127
+#: .\templates\pages\home.html:140 .\templates\pages\home.html:156
+#: .\templates\pages\home.html:169
 msgid "Batafsil"
 msgstr "Read More"
 
-#: .\templates\home.html:5
-msgid "Bosh sahifa || Vigonvita Toshkent"
-msgstr "Home || Vigonvita Tashkent"
+#: .\templates\pages\home.html:5 .\templates\pages\news.html:17
+msgid "Bosh sahifa"
+msgstr "Home"
 
-#: .\templates\home.html:40
+#: .\templates\pages\home.html:5 .\templates\pages\news-detail.html:5
+#: .\templates\pages\news.html:5
+msgid "Vigonvita Toshkent"
+msgstr "Vigonvita Tashkent"
+
+#: .\templates\pages\home.html:40
 msgid "Vigonvitaga xush kelibsiz"
 msgstr "Welcome to Vigonvita"
 
-#: .\templates\home.html:42
+#: .\templates\pages\home.html:42
 msgid "Innovatsion <br/> Biofarmatsevtik <br/> Tashkilot"
 msgstr "Innovative <br/> Biopharmaceutical <br/> Organization"
 
-#: .\templates\home.html:45 .\templates\home.html:71
+#: .\templates\pages\home.html:45 .\templates\pages\home.html:71
 msgid "Batafsil Ma'lumot"
 msgstr "Discover More"
 
-#: .\templates\home.html:80
+#: .\templates\pages\home.html:80
 msgid "Oldingi"
 msgstr "Prev"
 
-#: .\templates\home.html:81
+#: .\templates\pages\home.html:81
 msgid "Keyingi"
 msgstr "Next"
 
-#: .\templates\home.html:90
-msgid "IP MChJ VIGONVITA TOSHKENT"
-msgstr "IE LLC VIGONVITA TASHKENT"
-
-#: .\templates\home.html:114
+#: .\templates\pages\home.html:114
 msgid "Bizning Markazlar (Xitoy)"
 msgstr "Our Centers (China)"
 
-#: .\templates\home.html:183
+#: .\templates\pages\home.html:183
 msgid "Litsenziyalar & Patentlar"
 msgstr "Licences & Patents"
 
-#: .\templates\home.html:184
+#: .\templates\pages\home.html:184
 msgid "Kompaniyamizning Litsenziyalari va Patentlari"
 msgstr "Our company's Licences and Patents"
 
-#: .\templates\home.html:231
+#: .\templates\pages\home.html:231
 msgid "Unvonlar va Yutuqlar"
 msgstr "Honors and Qualifications"
 
-#: .\templates\home.html:361
+#: .\templates\pages\home.html:361
 msgid "Bizning Dorilar"
 msgstr "Our Medicines"
 
-#: .\templates\home.html:363 .\templates\home.html:607
+#: .\templates\pages\home.html:501 .\templates\pages\home.html:617
 msgid "Barchasi"
 msgstr "See All"
 
-#: .\templates\home.html:508
+#: .\templates\pages\home.html:515
 msgid "Savol Javoblar"
 msgstr "Question Answers"
 
-#: .\templates\home.html:509
+#: .\templates\pages\home.html:516
 msgid "Agarda qushimcha savollaringiz bo'lsa, Biz bilan bog'laning"
 msgstr "If you have any more questions, Contact us"
 
-#: .\templates\home.html:582
+#: .\templates\pages\home.html:589
 msgid "Hali ham savollaringiz bormi?"
 msgstr "Still have questions?"
 
-#: .\templates\home.html:600
+#: .\templates\pages\home.html:607
 msgid "Biz nima qilayotganimizni ko'ring"
 msgstr "Checkout what we have been doing"
 
-#: .\web\models.py:6 .\web\models.py:23
+#: .\web\models.py:6 .\web\models.py:27
 msgid "1:1 Nisbatdagi rasm yuklang"
 msgstr "Upload 1:1 ratio photo"
 
-#: .\web\models.py:6 .\web\models.py:23
+#: .\web\models.py:6 .\web\models.py:27
 msgid "Rasm"
 msgstr "Photo"
 
@@ -158,7 +165,7 @@ msgstr "Title"
 msgid "Qisqa link"
 msgstr "Slug"
 
-#: .\web\models.py:10 .\web\models.py:25
+#: .\web\models.py:10 .\web\models.py:29
 msgid "Matn"
 msgstr "Content"
 
@@ -174,9 +181,6 @@ msgstr "Created time"
 msgid "Yangilangan vaqti"
 msgstr "Updated Time"
 
-#: .\web\models.py:24
+#: .\web\models.py:28
 msgid "Nomi"
 msgstr "Name"
-
-#~ msgid "Slug"
-#~ msgstr "Slug"
