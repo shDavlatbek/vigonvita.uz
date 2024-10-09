@@ -7,14 +7,14 @@
 {% block content %}
 
 <section class="page-header">
-    <div class="page-header__bg"></div><!-- /.page-header__bg -->
+    <div class="page-header__bg" style='background-image: url({% static 'assets/images/backgrounds/mountains.png' %});'></div><!-- /.page-header__bg -->
     <div class="page-header-shape-1"></div><!-- /.page-header-shape-1 -->
     <div class="page-header-shape-2"></div><!-- /.page-header-shape-2 -->
     <div class="page-header-shape-3"></div><!-- /.page-header-shape-3 -->
     <div class="container">
         <div class="page-header__inner">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="index.html">{% translate "Bosh sahifa" %}</a></li>
+                <li><a href="{% url "home" %}">{% translate "Bosh sahifa" %}</a></li>
                 <li><span>/</span></li>
                 <li>{% translate "Yangiliklar" %}</li>
             </ul>
@@ -24,7 +24,7 @@
 </section>
 
 <!--News Start-->
-<section class="news-one" id="news">
+<section class="news-one">
     <div class="container">
         <div class="row">
             {% for single in news %}
