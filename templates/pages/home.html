@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %} 
 
-{% block title %}{% translate "Bosh sahifa || Vigonvita Toshkent" %}{% endblock title %}
+{% block title %}{% translate "Bosh sahifa" %} || {% translate "Vigonvita Toshkent" %}{% endblock title %}
 
 {% block content %}
 <section class="main-slider">
@@ -611,13 +611,13 @@
                 {% include "components/news_single.html" with news=single %}
             {% endfor %}
         </div>
-        {% comment %} {% if news|length > 4 %} {% endcomment %}
+        {% if news|length > 4 %}
         <div class="w-100 text-center mt-5 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
             <a href="{% url 'coming-soon' %}" class="thm-btn mx-auto">
                 {% translate "Barchasi" %}
             </a>
         </div>
-        {% comment %} {% endif %} {% endcomment %}
+        {% endif %}
     </div>
 </section>
 <!--News One End-->
