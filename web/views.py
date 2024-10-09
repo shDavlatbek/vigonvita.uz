@@ -13,7 +13,7 @@ class HomeView(View):
     
     
 class NewsAll(View):
-    def get(self, request, slug):
+    def get(self, request):
         return render(request, os.path.join(PAGES_DIR, "news.html"), {'news': News.objects.all()})
     
     
