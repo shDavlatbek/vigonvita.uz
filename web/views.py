@@ -19,7 +19,10 @@ class NewsAll(View):
     
 class NewsDetail(View):
     def get(self, request, slug):
-        return render(request, os.path.join(PAGES_DIR, "news-detail.html"), {'news': News.objects.get(slug=slug)})
+        news_obj = News.objects.get(slug=slug)
+        news_obj.views += 1
+        news_obj.save()
+        return render(request, os.path.join(PAGES_DIR, "news-detail.html"), {'news': news_obj, 'latest_news': News.objects.order_by('-created_at')[:2]})
 
 
 class ComingSoon(View):
