@@ -98,8 +98,8 @@ msgid "Vigonvitaga xush kelibsiz"
 msgstr "Добро Пожаловать в Вигонвита"
 
 #: .\templates\pages\home.html:42
-msgid "Innovatsion <br/> Biofarmatsevtik <br/> Tashkilot"
-msgstr "Инновационная <br/> Биофармацевтическая <br/> Организация"
+msgid "Innovatsion <br/>Biofarmatsevtik <br/>Kompaniya"
+msgstr "Инновационная <br/>Биофармацевтическая <br/>Компания"
 
 #: .\templates\pages\home.html:45 .\templates\pages\home.html:71
 msgid "Batafsil Ma'lumot"
