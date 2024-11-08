@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+from env import settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,13 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ub4f_+^zm$!!xoa(2fg-&br-$^#%-*972yq3vhp7=^rp@+$5ce'
+SECRET_KEY = settings.secret_key.get_secret_value()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = settings.debug
 
-ALLOWED_HOSTS = ['vigonvita.uz']
-CSRF_TRUSTED_ORIGINS = ['https://vigonvita.uz']
+ALLOWED_HOSTS = settings.allowed_hosts
+CSRF_TRUSTED_ORIGINS = settings.csrf_trusted_origins
 
 # Application definition
 
