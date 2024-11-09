@@ -1,0 +1,92 @@
+{% load static %}
+{% load i18n %} 
+
+<section class="services-one" id="about">
+  <div class="container">
+      <div class="section-title text-center">
+          <h2 class="section-title__title wow fadeInUp" data-wow-delay="300ms">{% translate "IP MChJ VIGONVITA TOSHKENT" %}</h2>
+          <span class="section-title__tagline mt-3 wow fadeInUp" data-wow-delay="300ms">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% if LANGUAGE_CODE == 'ru' %}
+              ИП ООО «VIGONVITA TASHKENT»  является дочерней компанией Vigonvita Life Sciences Co., Ltd, которая основана в январе 2013 года под руководством Сучжоуского института лекарственной медицины Китайской академии наук (SUSIMM).  Компания, ориентированная на новые клинические потребности, специализируется на разработке новых препаратов в области нервно-психической системы, лечения инфекционных заболеваний и андрологических препаратов.<br><br>
+              В Комании Vigonvita работает группа исследователей и разработчиков, которую возглавляет профессор Шэнь Цзиншань, эксперт по специальным пособиям Государственного совета и профессор Шанхайского института лекарственной медицины Китайской академии наук (SIMM). Мы открыли центры исследований и разработок в Сучжоу, Шанхае и Наньтуне, в которых работает более 200 сотрудников. Из них 16 имеют степень доктора философии, а 46% – магистры и доктора.<br><br>
+              Vigonvita имеет полную инновационную систему исследований и разработок лекарств, включая функциональные платформы или подразделения, такие как разработка  лекарств, оценка пригодности лекарств, доклинические исследования, клинические исследования и производство лекарств, которые могут реализовать быструю трансформацию и коммерциализацию потенциальных соединений и технологий продуктов. из лаборатории в клинику, а затем на стадию производства.<br><br>
+              Vigonvita Life Sciences Co., Ltd и Сучжоуский институт материальной медицины совместно профинансировали создание Wangshan Wangshui (Lianyungang) Pharmaceutical Co., Ltd, которая служит производственной площадкой для инновационных лекарств компании с годовой производственной мощностью 450 миллионов капсул ( или 1,6 миллиарда таблеток). Также вскоре будет завершено и введено в эксплуатацию вспомогательный цех по производству API. На случай чрезвычайных ситуаций строится многофункциональная модульная производственная платформа.
+              {% elif LANGUAGE_CODE == 'en' %}
+              IE LLC «VIGONVITA TASHKENT» is a subsidiary of Vigonvita Life Sciences Co., Ltd, founded in January 2013 under the leadership of the Suzhou Institute of Pharmaceutical Sciences of the Chinese Academy of Sciences (SIMM). The company focuses on addressing new clinical needs and specializes in developing drugs for neuropsychiatric conditions, infectious diseases, and andrological treatments.<br><br>
+              Vigonvita is home to a team of researchers and developers led by Professor Shen Jinshan, an expert under the State Council's Special Allowance Program and a professor at the Shanghai Institute of Pharmaceutical Sciences of the Chinese Academy of Sciences (SIMM). The company has established research and development centers in Suzhou, Shanghai, and Nantong, employing over 200 staff members, including 16 Ph.D. holders, with 46% of the team being master's or doctoral graduates.<br><br>
+              Vigonvita has a comprehensive system for innovative drug research and development, encompassing functional platforms or divisions for drug discovery, drug suitability evaluation, preclinical studies, clinical trials, and drug manufacturing. These platforms facilitate the rapid transformation and commercialization of promising compounds and technologies from the laboratory to clinical use, and ultimately to full-scale production.<br><br>
+              In collaboration with the Suzhou Institute of Pharmaceutical Sciences, Vigonvita Life Sciences Co., Ltd co-founded Wangshan Wangshui (Lianyungang) Pharmaceutical Co., Ltd, which serves as a manufacturing site for the company's innovative drugs. This facility has an annual production capacity of 450 million capsules (or 1.6 billion tablets), with an auxiliary API production workshop set to become operational soon. Additionally, a multifunctional modular production platform is under construction for emergency use.
+              {% else %}
+              IP MChJ «VIGONVITA TOSHKENT» 2013 yil yanvar oyida Xitoy Fanlar Akademiyasining Suzhou Tibbiyot Instituti (SUSIMM) rahbarligida tashkil etilgan Vigonvita Life Sciences Co., Ltd kompaniyasining sho'ba korxonasi hisoblanadi. Kompaniya yangi klinik ehtiyojlarga yo'naltirilgan bo'lib, neyropsikiyatrik kasalliklar, yuqumli kasalliklar va andrologik preparatlar sohasida yangi dori vositalarini ishlab chiqishga ixtisoslashgan. <br><br>
+              Vigonvita Davlat Kengashining maxsus imtiyozlari bo'yicha mutaxassisi, Xitoy Fanlar Akademiyasining Shanxay Tibbiyot Instituti (SIMM) professori Shen Jingshan boshchiligida tadqiqot va ishlanmalar guruhi faoliyat yuritadi. Biz Suzhou, Shanxay va Nantong shaharlarida 200 dan ortiq xodimga ega tadqiqot va ishlanma markazlarini tashkil etdik. Ular orasida 16 nafar fan nomzodi, 46 foizi esa magistr va doktorlik darajasiga ega mutaxassislar. <br><br>
+              Vigonvita to'liq innovatsion dori-darmonlarni tadqiq etish va ishlab chiqish tizimiga ega. Bu tizim dori vositalarini yaratish, ularni baholash, klinikadan oldingi va klinik tadqiqotlar, shuningdek dori vositalarini ishlab chiqarish kabi funktsional bo'linmalarni o'z ichiga oladi. Ushbu bo'linmalar yordamida laboratoriyadan klinikaga, keyin esa ishlab chiqarish bosqichiga tezkor tarzda o'tish amalga oshiriladi. <br><br>
+              Vigonvita Life Sciences Co., Ltd va Suzhou Moddiy Tibbiyot Instituti birgalikda yiliga 450 million kapsula (yoki 1,6 milliard tabletka) ishlab chiqarish quvvatiga ega bo'lgan Wangshan Wangshui (Lianyungang) Pharmaceutical Co., Ltd kompaniyasini tashkil etishni moliyalashtirdi. Yaqin kelajakda yordamchi API ishlab chiqarish inshooti ham foydalanishga topshiriladi. Shuningdek, favqulodda vaziyatlar uchun ko'p funksiyali modulli ishlab chiqarish platformasi qurilmoqda.
+              {% endif %}
+              
+          </span>
+      </div>
+
+      <div class="section-title text-center mb-4">
+          <h2 class="section-title__title wow fadeInLeft" data-wow-delay="300ms" style="font-size: 40px">{% translate "Bizning Markazlar (Xitoy)" %}</h2>
+      </div>
+
+      <div class="row">
+          <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/suzhou.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="#">Headquarter+R&D center</a></h3>
+                      <p class="services-one__text">Suzhou</p>
+                      <a href="#" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/shanghai.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="#">R&D center</a></h3>
+                      <p class="services-one__text">Shanghai</p>
+                      <a href="#" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xl-6 col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/nantong.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="#">R&D center</a></h3>
+                      <p class="services-one__text">Nantong</p>
+                      <a href="#" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-delay="600ms">
+              <!--Services One Single-->
+              <div class="services-one__single">
+                  <div class="services-one__img">
+                      <img src="{% static 'assets/images/production-centers/lianyungang.png' %}" alt="" />
+                  </div>
+                  <div class="services-one__content">
+                      <h3 class="services-one__title"><a href="#">Producon site</a></h3>
+                      <p class="services-one__text">Lianyungang</p>
+                      <a href="#" class="services-one__btn">{% translate "Batafsil" %}</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
