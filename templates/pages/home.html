@@ -10,7 +10,8 @@
 {% include "sections/about.html" %}
 {% include "sections/certificates-patents.html" %}
 {% include "sections/medicine.html" %}
-{% include "sections/faq.html" %}
+{% comment %} {% include "sections/faq.html" %} {% endcomment %}
+{% include "sections/news.html" %}
 
 <section class="cta-one wow zoomIn" data-wow-delay="100ms">
     <div class="cta-one-bg" style="background-image: url({% static 'assets/images/backgrounds/cta-one-bg.png' %})"></div>
@@ -20,7 +21,7 @@
                 <div class="cta-one__inner">
                     <div class="cta-one__left">
                         <h2 class="cta-one__title">
-                            {% translate "Hali ham savollaringiz bormi?" %}
+                            {% translate "Savolingiz bormi?" %}
                         </h2>
                     </div>
                     <div class="cta-one__right">
