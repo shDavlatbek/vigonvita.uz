@@ -9457,3 +9457,16 @@ body.boxed-wrapper {
     background-blend-mode: normal;
     opacity: 0.5;
 }
+
+.main-slider h2 {
+    font-size: 80px;
+    line-height: 75px;
+}
+
+.main-slider .container {
+    padding-top: 256px;
+}
+
+.main-slider .swiper-slide .container {
+    height: 100vh;
+}
