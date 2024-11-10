@@ -4,6 +4,8 @@
 
 {% block title %}{% translate "Bosh sahifa" %} || {% translate "Vigonvita Toshkent" %}{% endblock title %}
 
+{% block description %}{% translate "«VIGONVITA TOSHKENT» rasmiy web-sayti. Innovatsion, biofarmatsevtik kompaniya. Bizning preparatlarimiz: Onvita, Longvita" %}{% endblock description %}
+
 {% block content %}
 
 {% include "sections/main-slider.html" %}
@@ -11,7 +13,6 @@
 {% include "sections/certificates-patents.html" %}
 {% include "sections/medicine.html" %}
 {% comment %} {% include "sections/faq.html" %} {% endcomment %}
-{% include "sections/news.html" %}
 
 <section class="cta-one wow zoomIn" data-wow-delay="100ms">
     <div class="cta-one-bg" style="background-image: url({% static 'assets/images/backgrounds/cta-one-bg.png' %})"></div>
@@ -33,7 +34,6 @@
     </div>
 </section>
 
-
-<!--News One End-->
+{% include "sections/news.html" %}
 
 {% endblock content %}
