@@ -16,18 +16,18 @@ class NewsTranslationOptions(TranslationOptions):
     }
     
     
-class MedicineTranslationOptions(TranslationOptions):
-    fields = ('name', 'description')
-    required_languages = {
-        'ru': ('name', 'description',), 
-        'en': ('name', 'description',), 
-        'default': ('name', 'description',)
-    }
-    fallback_languages = {
-        'ru': ('name', 'description',), 
-        'en': ('name', 'description',), 
-        'default': ('name', 'description',)
-    }
+# class MedicineTranslationOptions(TranslationOptions):
+#     fields = ('name')
+#     required_languages = {
+#         'ru': ('name'), 
+#         'en': ('name'), 
+#         'default': ('name')
+#     }
+#     fallback_languages = {
+#         'ru': ('name'), 
+#         'en': ('name'), 
+#         'default': ('name')
+#     }
     
 translator.register(News, NewsTranslationOptions)
-translator.register(Medicine, MedicineTranslationOptions)
+# translator.register(Medicine, MedicineTranslationOptions)
