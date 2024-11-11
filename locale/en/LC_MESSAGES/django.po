@@ -145,8 +145,8 @@ msgid "Agarda qushimcha savollaringiz bo'lsa, Biz bilan bog'laning"
 msgstr "If you have any more questions, Contact us"
 
 #: .\templates\pages\home.html:589
-msgid "Hali ham savollaringiz bormi?"
-msgstr "Still have questions?"
+msgid "Savolingiz bormi?"
+msgstr "Have a question?"
 
 #: .\templates\pages\home.html:607
 msgid "Biz nima qilayotganimizni ko'ring"
