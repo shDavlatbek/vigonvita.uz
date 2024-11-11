@@ -9494,3 +9494,11 @@ body.boxed-wrapper {
     width: 467px;
     margin: 0 auto;
 }
+
+.product-details__content__text p+p {
+    margin-top: 5px;
+}
+
+.product-content p+p {
+    margin-top: 5px;
+}

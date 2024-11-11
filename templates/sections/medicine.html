@@ -1,5 +1,7 @@
 {% load static %}
 {% load i18n %} 
+{% load translated_field %}
+{% load custom_tags %}
 
 <section class="our-mission" id="medicine">
   <div class="our-mission-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%" style="background-image: url({% static 'assets/images/backgrounds/mountains.png' %})"></div>
@@ -25,30 +27,20 @@
                       <div class="tab active-tab">
                           <div class="financial-advice__content">
                             <div class="row">
+                                {% for single in medicine %}
                                 <div class="col-xl-6 col-lg-6 wow fadeInLeft animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInLeft;">
                                     <div class="services-one__single">
                                         <div class="services-one__img">
-                                            <img src="{% static 'assets/images/medicine/onvita-present3.png' %}" alt="">
+                                            <img src="{{ single.image.url }}" alt="{{ single.image.name }}">
                                         </div>
                                         <div class="services-one__content">
-                                            <h3 class="services-one__title"><a href="#">Onvita</a></h3>
-                                            <p class="services-one__text">Nantong</p>
-                                            <a href="#" class="services-one__btn">{% translate "Batafsil" %}</a>
+                                            <h3 class="services-one__title"><a href="{{ single.get_absolute_url }}">{{ single|translated_field:"name" }}</a></h3>
+                                            <p class="services-one__text">{{ single|translated_field:"description_sm"|short_description:100|safe }}</p>
+                                            <a href="{{ single.get_absolute_url }}" class="services-one__btn">{% translate "Batafsil" %}</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 col-lg-6 wow fadeInRight animated" data-wow-delay="600ms" style="visibility: visible; animation-delay: 600ms; animation-name: fadeInRight;">
-                                    <div class="services-one__single">
-                                        <div class="services-one__img">
-                                            <img src="{% static 'assets/images/medicine/longvita-present3.png' %}" alt="">
-                                        </div>
-                                        <div class="services-one__content">
-                                            <h3 class="services-one__title"><a href="#">Longvita</a></h3>
-                                            <p class="services-one__text">Lianyungang</p>
-                                            <a href="#" class="services-one__btn">{% translate "Batafsil" %}</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                           </div>
                       </div>

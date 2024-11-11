@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-11 16:46+0500\n"
-"PO-Revision-Date: 2024-11-11 16:47+0500\n"
+"POT-Creation-Date: 2024-11-11 20:45+0500\n"
+"PO-Revision-Date: 2024-11-11 20:50+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.5\n"
 
-#: .\config\settings.py:116
+#: .\config\settings.py:117
 msgid "Uzbekcha"
 msgstr "Uzbek"
 
-#: .\config\settings.py:117
+#: .\config\settings.py:118
 msgid "Ruscha"
 msgstr "Russia"
 
-#: .\config\settings.py:118
+#: .\config\settings.py:119
 msgid "Inglizcha"
 msgstr "English"
 
@@ -51,8 +51,8 @@ msgstr "Call us"
 msgid "Biz haqimizda"
 msgstr "About Us"
 
-#: .\templates\components\header_link.html:4 .\web\models.py:35
-#: .\web\models.py:36
+#: .\templates\components\header_link.html:4 .\web\models.py:43
+#: .\web\models.py:44
 msgid "Dorilar"
 msgstr "Medicine"
 
@@ -63,7 +63,7 @@ msgstr "FAQ"
 #: .\templates\components\header_link.html:6
 #: .\templates\pages\news-detail.html:21 .\templates\pages\news.html:5
 #: .\templates\pages\news.html:19 .\templates\pages\news.html:21
-#: .\templates\sections\news.html:7 .\web\models.py:23 .\web\models.py:24
+#: .\templates\sections\news.html:7 .\web\models.py:24 .\web\models.py:25
 msgid "Yangiliklar"
 msgstr "News"
 
@@ -79,6 +79,7 @@ msgstr "Views"
 #: .\templates\components\news_single.html:28
 #: .\templates\sections\about.html:44 .\templates\sections\about.html:57
 #: .\templates\sections\about.html:73 .\templates\sections\about.html:86
+#: .\templates\sections\medicine.html:36 .\templates\sections\medicine.html:48
 msgid "Batafsil"
 msgstr "Read More"
 
@@ -97,8 +98,8 @@ msgid ""
 "«VIGONVITA TOSHKENT» rasmiy web-sayti. Innovatsion, biofarmatsevtik "
 "kompaniya. Bizning preparatlarimiz: Onvita, Longvita"
 msgstr ""
-"Official website of \"VIGONVITA TASHKENT\". An innovative, "
-"biopharmaceutical company. Our medicines: Onvita, Longvita"
+"Official website of \"VIGONVITA TASHKENT\". An innovative, biopharmaceutical "
+"company. Our medicines: Onvita, Longvita"
 
 #: .\templates\pages\home.html:26
 msgid "Savolingiz bormi?"
@@ -161,50 +162,58 @@ msgstr "Prev"
 msgid "Keyingi"
 msgstr "Next"
 
-#: .\templates\sections\medicine.html:12
+#: .\templates\sections\medicine.html:11
 msgid "Bizning Dorilar"
 msgstr "Our Medicines"
-
-#: .\templates\sections\medicine.html:112 .\templates\sections\news.html:18
-msgid "Barchasi"
-msgstr "See All"
 
 #: .\templates\sections\news.html:8
 msgid "Biz nima qilayotganimizni ko'ring"
 msgstr "Checkout what we have been doing"
 
-#: .\web\models.py:6 .\web\models.py:27
+#: .\templates\sections\news.html:18
+msgid "Barchasi"
+msgstr "See All"
+
+#: .\web\models.py:7 .\web\models.py:28
 msgid "1:1 Nisbatdagi rasm yuklang"
 msgstr "Upload 1:1 ratio photo"
 
-#: .\web\models.py:6 .\web\models.py:27
+#: .\web\models.py:7 .\web\models.py:28
 msgid "Rasm"
 msgstr "Photo"
 
-#: .\web\models.py:8
+#: .\web\models.py:9
 msgid "Sarlavha"
 msgstr "Title"
 
-#: .\web\models.py:9
+#: .\web\models.py:10
 msgid "Qisqa link"
 msgstr "Slug"
 
-#: .\web\models.py:10 .\web\models.py:29
+#: .\web\models.py:11
 msgid "Matn"
 msgstr "Content"
 
-#: .\web\models.py:11
+#: .\web\models.py:12
 msgid "Ko'rishlar soni"
 msgstr "Views count"
 
-#: .\web\models.py:13
+#: .\web\models.py:14
 msgid "Yaratilgan vaqti"
 msgstr "Created time"
 
-#: .\web\models.py:14
+#: .\web\models.py:15
 msgid "Yangilangan vaqti"
 msgstr "Updated Time"
 
-#: .\web\models.py:28
+#: .\web\models.py:29 .\web\models.py:30 .\web\models.py:31
 msgid "Nomi"
 msgstr "Name"
+
+#: .\web\models.py:32 .\web\models.py:33 .\web\models.py:34
+msgid "Tavsif kichik"
+msgstr "Description small"
+
+#: .\web\models.py:35 .\web\models.py:36 .\web\models.py:37
+msgid "Tavsif"
+msgstr "Description"
