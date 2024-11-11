@@ -9470,3 +9470,27 @@ body.boxed-wrapper {
 .main-slider .swiper-slide .container {
     height: 100vh;
 }
+
+.financial-advice__single-2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+.financial-advice__single-2:before {
+    content: none;
+}
+
+.financial-advice__single-3 {
+    margin-left: 0;
+}
+
+.financial-advice__img{
+    display: flex;
+}
+
+.financial-advice__img>img{
+    width: 467px;
+    margin: 0 auto;
+}
