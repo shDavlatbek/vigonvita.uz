@@ -35,7 +35,7 @@
                                         </div>
                                         <div class="services-one__content">
                                             <h3 class="services-one__title"><a href="{{ single.get_absolute_url }}">{{ single|translated_field:"name" }}</a></h3>
-                                            <p class="services-one__text">{{ single|translated_field:"description_sm"|short_description:100|safe }}</p>
+                                            <p class="services-one__text">{{ single|translated_field:"description_sm"|striptags|short_description:100 }}</p>
                                             <a href="{{ single.get_absolute_url }}" class="services-one__btn">{% translate "Batafsil" %}</a>
                                         </div>
                                     </div>
