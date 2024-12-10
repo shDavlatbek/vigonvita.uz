@@ -95,7 +95,7 @@
     <div class="container-fluid">
       <div class="row pb-5">
         <div class="col-12 col-lg-8 py-5">
-          <div class="swiper overflow-hidden" id="swiper-photos">
+          <div class="swiper overflow-hidden py-5 " id="swiper-photos">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img class="img-fluid rounded shadow" src="{% static 'assets/images/dubai/2.jpg' %}" alt="">
@@ -143,6 +143,39 @@
   </section>
   
   <style>
+    #swiper-photos {
+        position: relative;
+      }
+      
+      /* Left Fade */
+      #swiper-photos::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80px;           /* Adjust width for how far the fade extends */
+        height: 100%;
+        z-index: 10;
+        pointer-events: none;
+        background: linear-gradient(to right, 
+        #f8f9fa, 
+                                    rgba(255, 255, 255, 0));
+      }
+      
+      /* Right Fade */
+      #swiper-photos::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;           /* Adjust width as needed */
+        height: 100%;
+        z-index: 10;
+        pointer-events: none;
+        background: linear-gradient(to left, 
+        #f8f9fa, 
+                                    rgba(255, 255, 255, 0));
+      }
     #swiper-photos .swiper-wrapper {
         height: 400px; /* Adjust to your preferred height */
         display: flex;
@@ -156,6 +189,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgb(0, 0, 0);
       }
       
       /* Make the image fill the slide area uniformly */
