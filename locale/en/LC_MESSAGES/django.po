@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-11 20:45+0500\n"
-"PO-Revision-Date: 2024-11-11 20:50+0500\n"
+"POT-Creation-Date: 2024-12-10 16:59+0500\n"
+"PO-Revision-Date: 2024-12-10 16:57+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -43,7 +43,7 @@ msgstr "Tashkent, Yunusabad district, Akhilobod MSG, block 13, house 45"
 msgid "IP MChJ VIGONVITA TOSHKENT"
 msgstr "IE LLC VIGONVITA TASHKENT"
 
-#: .\templates\components\header.html:37 .\templates\pages\home.html:30
+#: .\templates\components\header.html:37 .\templates\pages\home.html:28
 msgid "Biz bilan bog'lanish"
 msgstr "Call us"
 
@@ -51,8 +51,9 @@ msgstr "Call us"
 msgid "Biz haqimizda"
 msgstr "About Us"
 
-#: .\templates\components\header_link.html:4 .\web\models.py:43
-#: .\web\models.py:44
+#: .\templates\components\header_link.html:4
+#: .\templates\pages\medicine-detail.html:23 .\web\models.py:46
+#: .\web\models.py:47
 msgid "Dorilar"
 msgstr "Medicine"
 
@@ -79,17 +80,17 @@ msgstr "Views"
 #: .\templates\components\news_single.html:28
 #: .\templates\sections\about.html:44 .\templates\sections\about.html:57
 #: .\templates\sections\about.html:73 .\templates\sections\about.html:86
-#: .\templates\sections\medicine.html:36 .\templates\sections\medicine.html:48
+#: .\templates\sections\medicine.html:39
 msgid "Batafsil"
 msgstr "Read More"
 
-#: .\templates\pages\home.html:5 .\templates\pages\news-detail.html:19
-#: .\templates\pages\news.html:17
+#: .\templates\pages\home.html:5 .\templates\pages\medicine-detail.html:21
+#: .\templates\pages\news-detail.html:19 .\templates\pages\news.html:17
 msgid "Bosh sahifa"
 msgstr "Home"
 
-#: .\templates\pages\home.html:5 .\templates\pages\news-detail.html:7
-#: .\templates\pages\news.html:5
+#: .\templates\pages\home.html:5 .\templates\pages\medicine-detail.html:7
+#: .\templates\pages\news-detail.html:7 .\templates\pages\news.html:5
 msgid "Vigonvita Toshkent"
 msgstr "Vigonvita Tashkent"
 
@@ -101,7 +102,7 @@ msgstr ""
 "Official website of \"VIGONVITA TASHKENT\". An innovative, biopharmaceutical "
 "company. Our medicines: Onvita, Longvita"
 
-#: .\templates\pages\home.html:26
+#: .\templates\pages\home.html:24
 msgid "Savolingiz bormi?"
 msgstr "Have a question?"
 
@@ -113,15 +114,15 @@ msgstr "Latest news"
 msgid "Bizning Markazlar (Xitoy)"
 msgstr "Our Centers (China)"
 
-#: .\templates\sections\certificates-patents.html:8
+#: .\templates\sections\certificates-patents.html:9
 msgid "Litsenziyalar & Patentlar"
 msgstr "Licences & Patents"
 
-#: .\templates\sections\certificates-patents.html:9
+#: .\templates\sections\certificates-patents.html:10
 msgid "Kompaniyamizning Litsenziyalari va Patentlari"
 msgstr "Our company's Licences and Patents"
 
-#: .\templates\sections\certificates-patents.html:54
+#: .\templates\sections\certificates-patents.html:63
 msgid "Unvonlar va Yutuqlar"
 msgstr "Honors and Qualifications"
 
@@ -162,7 +163,43 @@ msgstr "Prev"
 msgid "Keyingi"
 msgstr "Next"
 
-#: .\templates\sections\medicine.html:11
+#: .\templates\sections\media.html:9
+msgid "Kompaniyamizning media ma'lumotlari"
+msgstr "Our company's media information"
+
+#: .\templates\sections\media.html:10
+msgid "Rasm & Video"
+msgstr "Photo & Video"
+
+#: .\templates\sections\media.html:18 .\templates\sections\media.html:20
+#: .\templates\sections\media.html:22 .\templates\sections\media.html:27
+msgid "Vigonvita Tashkent - Firma Haqida"
+msgstr "Vigonvita Tashkent - About the company"
+
+#: .\templates\sections\media.html:36 .\templates\sections\media.html:40
+#: .\templates\sections\media.html:45
+msgid "Vigonvita Tashkent - 2023 O'zbekiston Urologlar kongresi"
+msgstr "Vigonvita Tashkent - 2023 Congress of Urologists of Uzbekistan"
+
+#: .\templates\sections\media.html:56 .\templates\sections\media.html:59
+#: .\templates\sections\media.html:61 .\templates\sections\media.html:66
+msgid "Vigonvita Tashkent - 24 chi Butunjahon Jinsiy Tibbiyot Kongresi"
+msgstr "Vigonvita Tashkent - 24th World Congress of Sexual Medicine"
+
+#: .\templates\sections\media.html:75 .\templates\sections\media.html:78
+#: .\templates\sections\media.html:80 .\templates\sections\media.html:85
+msgid "Vigonvita Tashkent - Shavaxabov Ma'ruzasi"
+msgstr "Vigonvita Tashkent - Shavaxabov Lecture"
+
+#: .\templates\sections\media.html:134
+msgid "Jinsiy tibbiyot bo'yicha 24-Jahon kongressida ishtirokimiz"
+msgstr "Participation in the 24th World Congress on Sexual Medicine"
+
+#: .\templates\sections\media.html:137
+msgid "2023 yil 15-17 dekabr kunlari Dubay (BAA)"
+msgstr "from 15 to 17 December 2023 in Dubai (UAE)"
+
+#: .\templates\sections\medicine.html:13
 msgid "Bizning Dorilar"
 msgstr "Our Medicines"
 
@@ -174,7 +211,7 @@ msgstr "Checkout what we have been doing"
 msgid "Barchasi"
 msgstr "See All"
 
-#: .\web\models.py:7 .\web\models.py:28
+#: .\web\models.py:7
 msgid "1:1 Nisbatdagi rasm yuklang"
 msgstr "Upload 1:1 ratio photo"
 
