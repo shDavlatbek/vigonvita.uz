@@ -9502,3 +9502,14 @@ body.boxed-wrapper {
 .product-content p+p {
     margin-top: 5px;
 }
+
+.shop-one__cart {
+    opacity: 1;
+    visibility: visible;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px #000;
+}
+
+.shop-one__item{
+    opacity: 0.9;
+}

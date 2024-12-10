@@ -37,8 +37,8 @@ msgid "Tez kunlarda"
 msgstr "Скоро"
 
 #: .\templates\components\footer.html:38
-msgid "O'zbekiston, Shahar: Toshkent, Tuman: Yunusobod, Sohibkor ko'chasi, 2"
-msgstr "Узбекистан, Город: Ташкент, Район: Юнусабадский, ул. Сохибкор, 2"
+msgid "Toshkent shahri, Yunusobod tumani, Axilobod MFY, 13 mavzesi, 45 uy"
+msgstr "Ташкент, Юнусабадский район, Ахилобод МСГ, квартал 13, Дом 45"
 
 #: .\templates\components\footer.html:73 .\templates\sections\about.html:7
 msgid "IP MChJ VIGONVITA TOSHKENT"

@@ -10,7 +10,7 @@
                 <div class="col-xl-8 col-lg-8 col-md-8 wow fadeInUp" data-wow-delay="100ms">
                     <div class="footer-widget__column footer-widget__about">
                         <div class="footer-widget__about-logo">
-                            <a href="#"><img src="{% static 'assets/images/footer-logo.png' %}" alt="" /></a>
+                            <a href="javascript:void(0)"><img src="{% static 'assets/images/footer-logo.png' %}" alt="" /></a>
                         </div>
                         <!-- <p class="footer-widget__text">Welcome to our consultancy agency. Lore ipsum simply text amet cing elit.</p> -->
                         <ul class="list-unstyled footer-widget__contact-list">
@@ -35,7 +35,7 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="text">
-                                    <p>{% translate "O'zbekiston, Shahar: Toshkent, Tuman: Yunusobod, Sohibkor ko'chasi, 2" %}</p>
+                                    <p>{% translate "Toshkent shahri, Yunusobod tumani, Axilobod MFY, 13 mavzesi, 45 uy" %}</p>
                                 </div>
                             </li>
                         </ul>
@@ -70,6 +70,9 @@
                         <div class="site-footer-bottom__left">
                             {% load tz %}
                             <p>©️ {% now "Y" %} {% translate "IP MChJ VIGONVITA TOSHKENT" %} </p>
+                        </div>
+                        <div class="site-footer__social ms-5">
+                            {% include "components/soc_media_links.html" %}
                         </div>
                     </div>
                 </div>
