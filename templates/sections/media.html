@@ -1,7 +1,7 @@
 {% load static %}
 {% load i18n %}
 
-<section class="news-one">
+<section class="news-one" id='media'>
     <div class="real-world-shape wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
         style="background-image: url({% static 'assets/images/shapes/real-world-shape.png' %})"></div>
     <div class="container">
@@ -91,7 +91,9 @@
     </div>
 </section>
 
-<section class="py-5 bg-light">
+<section class="real-world">
+  <div class="real-world-shape wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
+      style="background-image: url({% static 'assets/images/shapes/real-world-shape.png' %})"></div>
     <div class="container-fluid">
       <div class="row pb-5">
         <div class="col-12 col-lg-8 py-5">
@@ -130,7 +132,7 @@
         </div>
         <div class="col-12 col-lg-4 d-flex align-items-center">
           <div class="text-center px-4">
-            <h2 class="display-5 fw-bold">
+            <h2 class="display-5 fw-bold text-white">
               {% translate "Jinsiy tibbiyot bo'yicha 24-Jahon kongressida ishtirokimiz" %}
             </h2>
             <p class="lead">
@@ -139,9 +141,9 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
+  </div>
+</section>
+
   <style>
     #swiper-photos {
         position: relative;
@@ -158,7 +160,7 @@
         z-index: 10;
         pointer-events: none;
         background: linear-gradient(to right, 
-        #f8f9fa, 
+        #0f0d1d, 
                                     rgba(255, 255, 255, 0));
       }
       
@@ -173,7 +175,7 @@
         z-index: 10;
         pointer-events: none;
         background: linear-gradient(to left, 
-        #f8f9fa, 
+        #0f0d1d, 
                                     rgba(255, 255, 255, 0));
       }
     #swiper-photos .swiper-wrapper {

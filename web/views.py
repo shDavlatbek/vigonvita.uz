@@ -37,3 +37,8 @@ class MedicineDetail(View):
 class ComingSoon(View):
     def get(self, request):
         return render(request, 'coming-soon.html')
+    
+
+class Lianyungang(View):
+    def get(self, request):
+        return render(request, os.path.join(PAGES_DIR, 'lianyungang.html'))

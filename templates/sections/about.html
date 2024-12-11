@@ -8,10 +8,12 @@
           <span class="section-title__tagline mt-3 wow fadeInUp" data-wow-delay="300ms">
               {% get_current_language as LANGUAGE_CODE %}
               {% if LANGUAGE_CODE == 'ru' %}
-              ИП ООО «VIGONVITA TASHKENT»  является дочерней компанией Vigonvita Life Sciences Co., Ltd, которая основана в январе 2013 года под руководством Сучжоуского института лекарственной медицины Китайской академии наук (SUSIMM).  Компания, ориентированная на новые клинические потребности, специализируется на разработке новых препаратов в области нервно-психической системы, лечения инфекционных заболеваний и андрологических препаратов.<br><br>
-              В Комании Vigonvita работает группа исследователей и разработчиков, которую возглавляет профессор Шэнь Цзиншань, эксперт по специальным пособиям Государственного совета и профессор Шанхайского института лекарственной медицины Китайской академии наук (SIMM). Мы открыли центры исследований и разработок в Сучжоу, Шанхае и Наньтуне, в которых работает более 200 сотрудников. Из них 16 имеют степень доктора философии, а 46% – магистры и доктора.<br><br>
-              Vigonvita имеет полную инновационную систему исследований и разработок лекарств, включая функциональные платформы или подразделения, такие как разработка  лекарств, оценка пригодности лекарств, доклинические исследования, клинические исследования и производство лекарств, которые могут реализовать быструю трансформацию и коммерциализацию потенциальных соединений и технологий продуктов. из лаборатории в клинику, а затем на стадию производства.<br><br>
-              Vigonvita Life Sciences Co., Ltd и Сучжоуский институт материальной медицины совместно профинансировали создание Wangshan Wangshui (Lianyungang) Pharmaceutical Co., Ltd, которая служит производственной площадкой для инновационных лекарств компании с годовой производственной мощностью 450 миллионов капсул ( или 1,6 миллиарда таблеток). Также вскоре будет завершено и введено в эксплуатацию вспомогательный цех по производству API. На случай чрезвычайных ситуаций строится многофункциональная модульная производственная платформа.
+              Фармацевтическая компания ИП ООО «VIGONVITA TASHKENT»  была создана 12 мая 2021 г.  С начала  функционирования на фармацевтическом рынке Республики компания  зарекомендовало себя как предприятие по реализации качественной  продукции, <br><br>
+              Компания является представительством  компании  Vigonvita Life Sciences Co., Ltd, (Китай) которая основана в январе 2013 года под руководством Сучжоуского института лекарственной медицины Китайской академии наук (SUSIMM). Компания, ориентированная на новые клинические потребности, специализируется на разработке новых препаратов в области нервно-психической системы, лечения инфекционных заболеваний и андрологических препаратов.<br><br>
+              В Комании работает группа исследователей и разработчиков, которую возглавляет профессор Шэнь Цзиншань, эксперт по специальным пособиям Государственного совета и профессор Шанхайского института лекарственной медицины Китайской академии наук (SIMM). В компании имеется центры исследований и разработок в Сучжоу, Шанхае и Наньтуне, в которых работает более 200 сотрудников. Из них 16 имеют степень доктора философии, а 46% – магистры и доктора.<br><br>
+              Vigonvita имеет полную инновационную систему исследований и разработок лекарств, включая функциональные платформы или подразделения, такие как разработка лекарств, оценка пригодности лекарств, доклинические исследования, клинические исследования и производство лекарств, которые могут реализовать быструю трансформацию и коммерциализацию потенциальных соединений и технологий продуктов. из лаборатории в клинику, а затем на стадию производства.<br><br>
+              Vigonvita Life Sciences Co., Ltd и Сучжоуский институт материальной медицины совместно профинансировали создание Vigonvita (Lianyungang) Pharmaceutical Co., Ltd., которая служит производственной площадкой для инновационных лекарств компании с годовой производственной мощностью 450 миллионов капсул ( или 1,6 миллиарда таблеток).<br><br>
+              Также вскоре будет завершено и введено в эксплуатацию вспомогательный цех по производству API. На случай чрезвычайных ситуаций строится многофункциональная модульная производственная платформа.
               {% elif LANGUAGE_CODE == 'en' %}
               IE LLC «VIGONVITA TASHKENT» is a subsidiary of Vigonvita Life Sciences Co., Ltd, founded in January 2013 under the leadership of the Suzhou Institute of Pharmaceutical Sciences of the Chinese Academy of Sciences (SIMM). The company focuses on addressing new clinical needs and specializes in developing drugs for neuropsychiatric conditions, infectious diseases, and andrological treatments.<br><br>
               Vigonvita is home to a team of researchers and developers led by Professor Shen Jinshan, an expert under the State Council's Special Allowance Program and a professor at the Shanghai Institute of Pharmaceutical Sciences of the Chinese Academy of Sciences (SIMM). The company has established research and development centers in Suzhou, Shanghai, and Nantong, employing over 200 staff members, including 16 Ph.D. holders, with 46% of the team being master's or doctoral graduates.<br><br>
@@ -39,7 +41,7 @@
                       <img src="{% static 'assets/images/production-centers/suzhou.png' %}" alt="" />
                   </div>
                   <div class="services-one__content">
-                      <h3 class="services-one__title"><a href="javascript:void(0)">Headquarter+R&D center</a></h3>
+                      <h3 class="services-one__title"><a href="javascript:void(0)">{% translate "Bosh ofis va Tadqiqot markazi" %}</a></h3>
                       <p class="services-one__text">Suzhou</p>
                       <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
                   </div>
@@ -52,7 +54,7 @@
                       <img src="{% static 'assets/images/production-centers/shanghai.png' %}" alt="" />
                   </div>
                   <div class="services-one__content">
-                      <h3 class="services-one__title"><a href="javascript:void(0)">R&D center</a></h3>
+                      <h3 class="services-one__title"><a href="javascript:void(0)">{% translate "Tadqiqot markazi" %}</a></h3>
                       <p class="services-one__text">Shanghai</p>
                       <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
                   </div>
@@ -68,7 +70,7 @@
                       <img src="{% static 'assets/images/production-centers/nantong.png' %}" alt="" />
                   </div>
                   <div class="services-one__content">
-                      <h3 class="services-one__title"><a href="javascript:void(0)">R&D center</a></h3>
+                      <h3 class="services-one__title"><a href="javascript:void(0)">{% translate "Dori ishlab chiqarish zavodi" %}</a></h3>
                       <p class="services-one__text">Nantong</p>
                       <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
                   </div>
@@ -81,9 +83,9 @@
                       <img src="{% static 'assets/images/production-centers/lianyungang.png' %}" alt="" />
                   </div>
                   <div class="services-one__content">
-                      <h3 class="services-one__title"><a href="javascript:void(0)">Producon site</a></h3>
+                      <h3 class="services-one__title"><a href="{% url "lianyungang" %}">{% translate "Dori ishlab chiqarish zavodi" %}</a></h3>
                       <p class="services-one__text">Lianyungang</p>
-                      <a href="javascript:void(0)" class="services-one__btn">{% translate "Batafsil" %}</a>
+                      <a href="{% url "lianyungang" %}" class="services-one__btn">{% translate "Batafsil" %}</a>
                   </div>
               </div>
           </div>

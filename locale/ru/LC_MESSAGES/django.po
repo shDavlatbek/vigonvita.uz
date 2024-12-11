@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-10 16:59+0500\n"
-"PO-Revision-Date: 2024-12-10 16:55+0500\n"
+"POT-Creation-Date: 2024-12-11 17:07+0500\n"
+"PO-Revision-Date: 2024-12-11 17:09+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.5\n"
 
 #: .\config\settings.py:117
@@ -36,7 +36,7 @@ msgstr "Английский"
 msgid "Tez kunlarda"
 msgstr "Скоро"
 
-#: .\templates\components\footer.html:38
+#: .\templates\components\footer.html:38 .\templates\sections\contact.html:51
 msgid "Toshkent shahri, Yunusobod tumani, Axilobod MFY, 13 mavzesi, 45 uy"
 msgstr "Ташкент, Юнусабадский район, Ахилобод МСГ, квартал 13, Дом 45"
 
@@ -45,6 +45,7 @@ msgid "IP MChJ VIGONVITA TOSHKENT"
 msgstr "ИП ООО «ВИГОНВИТА ТАШКЕНТ»"
 
 #: .\templates\components\header.html:37 .\templates\pages\home.html:28
+#: .\templates\sections\contact.html:9
 msgid "Biz bilan bog'lanish"
 msgstr "Связаться с нами"
 
@@ -63,11 +64,8 @@ msgid "FAQ"
 msgstr "FAQ"
 
 #: .\templates\components\header_link.html:6
-#: .\templates\pages\news-detail.html:21 .\templates\pages\news.html:5
-#: .\templates\pages\news.html:19 .\templates\pages\news.html:21
-#: .\templates\sections\news.html:7 .\web\models.py:24 .\web\models.py:25
-msgid "Yangiliklar"
-msgstr "Новости"
+msgid "Media"
+msgstr "Медиа"
 
 #: .\templates\components\header_link.html:7
 msgid "Bo'glanish"
@@ -79,18 +77,21 @@ msgid "Ko'rishlar"
 msgstr "Просмотров"
 
 #: .\templates\components\news_single.html:28
-#: .\templates\sections\about.html:44 .\templates\sections\about.html:57
-#: .\templates\sections\about.html:73 .\templates\sections\about.html:86
+#: .\templates\sections\about.html:46 .\templates\sections\about.html:59
+#: .\templates\sections\about.html:75 .\templates\sections\about.html:88
 #: .\templates\sections\medicine.html:39
 msgid "Batafsil"
 msgstr "Подробнее"
 
-#: .\templates\pages\home.html:5 .\templates\pages\medicine-detail.html:21
+#: .\templates\pages\home.html:5 .\templates\pages\lianyungang.html:5
+#: .\templates\pages\lianyungang.html:21
+#: .\templates\pages\medicine-detail.html:21
 #: .\templates\pages\news-detail.html:19 .\templates\pages\news.html:17
 msgid "Bosh sahifa"
 msgstr "Главная страница"
 
-#: .\templates\pages\home.html:5 .\templates\pages\medicine-detail.html:7
+#: .\templates\pages\home.html:5 .\templates\pages\lianyungang.html:5
+#: .\templates\pages\medicine-detail.html:7
 #: .\templates\pages\news-detail.html:7 .\templates\pages\news.html:5
 msgid "Vigonvita Toshkent"
 msgstr "Вигонвита Ташкент"
@@ -107,13 +108,36 @@ msgstr ""
 msgid "Savolingiz bormi?"
 msgstr "Есть вопросы?"
 
+#: .\templates\pages\lianyungang.html:23 .\templates\pages\lianyungang.html:25
+msgid "Lianyungang"
+msgstr "Lianyungang"
+
+#: .\templates\pages\lianyungang.html:33 .\templates\sections\about.html:73
+#: .\templates\sections\about.html:86
+msgid "Dori ishlab chiqarish zavodi"
+msgstr "Завод по производству препаратов"
+
+#: .\templates\pages\news-detail.html:21 .\templates\pages\news.html:5
+#: .\templates\pages\news.html:19 .\templates\pages\news.html:21
+#: .\templates\sections\news.html:7 .\web\models.py:24 .\web\models.py:25
+msgid "Yangiliklar"
+msgstr "Новости"
+
 #: .\templates\pages\news-detail.html:63
 msgid "Ohirgi yangiliklar"
 msgstr "Последние новости"
 
-#: .\templates\sections\about.html:31
+#: .\templates\sections\about.html:33
 msgid "Bizning Markazlar (Xitoy)"
 msgstr "Наши центры (Китай)"
+
+#: .\templates\sections\about.html:44
+msgid "Bosh ofis va Tadqiqot markazi"
+msgstr "Головной офис и исследовательский центр"
+
+#: .\templates\sections\about.html:57
+msgid "Tadqiqot markazi"
+msgstr "Исследовательский центр"
 
 #: .\templates\sections\certificates-patents.html:9
 msgid "Litsenziyalar & Patentlar"
@@ -126,6 +150,34 @@ msgstr "Лицензии и Патенты нашей компании"
 #: .\templates\sections\certificates-patents.html:63
 msgid "Unvonlar va Yutuqlar"
 msgstr "Награды и Квалификации"
+
+#: .\templates\sections\contact.html:16
+msgid "Kompaniyasining O'zbekistondagi vakolatxonasi"
+msgstr "Представительство компании в Узбекистане"
+
+#: .\templates\sections\contact.html:27
+msgid "Direktor"
+msgstr "Директор"
+
+#: .\templates\sections\contact.html:38
+msgid "Menejer"
+msgstr "Менеджер"
+
+#: .\templates\sections\contact.html:49
+msgid "Xitoydagi Bosh Ofis"
+msgstr "Головной офис в Китае"
+
+#: .\templates\sections\contact.html:52
+msgid "Web-sayt:"
+msgstr "Веб-сайт:"
+
+#: .\templates\sections\contact.html:53
+msgid "Savdo bo'limi boshlig'i:"
+msgstr "Руководитель отдела продаж:"
+
+#: .\templates\sections\contact.html:54
+msgid "Savdo bo'limi direktori:"
+msgstr "Директор отдела продаж:"
 
 #: .\templates\sections\faq.html:8
 msgid "Savol Javoblar"
@@ -192,11 +244,11 @@ msgstr "Вигонвита Ташкент - 24-й Всемирный конгр�
 msgid "Vigonvita Tashkent - Shavaxabov Ma'ruzasi"
 msgstr "Вигонвита Ташкент - Лекция Шавахабова"
 
-#: .\templates\sections\media.html:134
+#: .\templates\sections\media.html:136
 msgid "Jinsiy tibbiyot bo'yicha 24-Jahon kongressida ishtirokimiz"
 msgstr "Участие в 24-ом Всемирном конгрессе по сексуальной медицине"
 
-#: .\templates\sections\media.html:137
+#: .\templates\sections\media.html:139
 msgid "2023 yil 15-17 dekabr kunlari Dubay (BAA)"
 msgstr "с 15 по 17 декабря 2023 года в Дубае (ОАЭ)"
 
